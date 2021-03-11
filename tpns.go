@@ -130,17 +130,17 @@ type IOSMessage struct {
 }
 
 type TagItem struct {
-	Tags          []string `json:"tags,omitempty"`
-	IsNot         bool     `json:"is_not"`
-	TagsOperator  string   `json:"tags_operator,omitempty"`
-	ItemsOperator string   `json:"items_operator,omitempty"`
-	TagType       string   `json:"tag_type,omitempty"`
+	Tags          []string         `json:"tags,omitempty"`
+	IsNot         bool             `json:"is_not"`
+	TagsOperator  TagOperationType `json:"tags_operator,omitempty"`
+	ItemsOperator TagOperationType `json:"items_operator,omitempty"`
+	TagType       string           `json:"tag_type,omitempty"`
 }
 
 type TagRule struct {
-	TagItems []TagItem `json:"tag_items,omitempty"`
-	IsNot    bool      `json:"is_not"`
-	Operator string    `json:"operator,omitempty"`
+	TagItems []TagItem        `json:"tag_items,omitempty"`
+	IsNot    bool             `json:"is_not"`
+	Operator TagOperationType `json:"operator,omitempty"`
 }
 
 type AcceptTime struct {
