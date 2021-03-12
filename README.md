@@ -28,6 +28,7 @@
            tpns.WithEnvironment(tpns.Develop),
        )
   
+       //@params: host, accessId, secretkey
        client := tpns.NewClient(tpns.GuangzhouHost, 10086, "abc")
        resp, err := client.Do(req)
        fmt.Printf("resp: %+v, err: %v\n", resp, err)
@@ -58,6 +59,7 @@
            tpns.WithEnvironment(tpns.Develop),
        )
     
+       //@params: host, accessId, secretkey
        client := tpns.NewClient(tpns.GuangzhouHost, 10086, "abc")
        resp, err := client.Do(req)
        fmt.Printf("resp: %+v, err: %v\n", resp, err)
@@ -87,6 +89,7 @@
            tpns.WithEnvironment(tpns.Develop),
        )
     
+       //@params: host, accessId, secretkey
        client := tpns.NewClient(tpns.GuangzhouHost, 10086, "abc")
        resp, err := client.Do(req)
        fmt.Printf("resp: %+v, err: %v\n", resp, err)
@@ -117,6 +120,7 @@
            tpns.WithEnvironment(tpns.Develop),
        )
     
+       //@params: host, accessId, secretkey
        client := tpns.NewClient(tpns.GuangzhouHost, 10086, "abc")
        resp, err := client.Do(req)
        fmt.Printf("resp: %+v, err: %v\n", resp, err)
@@ -147,6 +151,7 @@
            tpns.WithEnvironment(tpns.Develop),
        )
     
+       //@params: host, accessId, secretkey
        client := tpns.NewClient(tpns.GuangzhouHost, 10086, "abc")
        resp, err := client.Do(req)
        fmt.Printf("resp: %+v, err: %v\n", resp, err)
@@ -187,6 +192,7 @@
            tpns.WithEnvironment(tpns.Develop),
        )
 
+       //@params: host, accessId, secretkey
        client := tpns.NewClient(tpns.GuangzhouHost, 10086, "abc")
        resp, err := client.Do(req)
        fmt.Printf("resp: %+v, err: %v\n", resp, err)
@@ -202,6 +208,7 @@
    )
      
    func main() {
+       //@params: host, accessId, secretkey
        client := tpns.NewClient(tpns.GuangzhouHost, 10086, "abc")
        uploadResp, err := client.Upload("file.txt", 10 * time.Second)
        if err != nil || uploadResp.RetCode != 0 {
@@ -237,6 +244,7 @@
    )
      
    func main() {
+       //@params: host, accessId, secretkey
        client := tpns.NewClient(tpns.GuangzhouHost, 10086, "abc")
        uploadResp, err := client.Upload("file.txt", 10 * time.Second)
        if err != nil || uploadResp.RetCode != 0 {
