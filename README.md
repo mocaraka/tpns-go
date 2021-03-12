@@ -169,13 +169,13 @@
        //}
        var tagItem = tpns.TagItem {
            Tags: []string{"guangdong", "hunan"},
-           TagsOperator: "OR",
-           ItemsOperator: "OR",
+           TagsOperator: tpns.TagOperationOr,
+           ItemsOperator: tpns.TagOperationOr,
            TagType: "xg_auto_province",
        }
        var tagRule = tpns.TagRule {
            TagItems: []tpns.TagItem{tagItem},
-           Operator: "OR",
+           Operator: tpns.TagOperationOr,
        }
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceTag),
