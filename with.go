@@ -8,6 +8,7 @@ func WithAudience(audience AudienceType) Option {
 	}
 }
 
+//deprecated
 func WithPlatform(platform PlatformType) Option {
 	return func(r *Request) {
 		r.Platform = platform

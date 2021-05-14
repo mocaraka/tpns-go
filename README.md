@@ -21,7 +21,6 @@
        //}
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceAll),
-           tpns.WithPlatform(tpns.PlatformIOS),
            tpns.WithMessageType(tpns.Notify),
            tpns.WithTitle("this is title"),
            tpns.WithContent("this is content"),
@@ -52,7 +51,6 @@
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceToken),
            tpns.WithTokenList([]string{"token1"}),
-           tpns.WithPlatform(tpns.PlatformIOS),
            tpns.WithMessageType(tpns.Notify),
            tpns.WithTitle("this is title"),
            tpns.WithContent("this is content"),
@@ -82,7 +80,6 @@
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceTokenList),
            tpns.WithTokenList([]string{"token1", "token2"}),
-           tpns.WithPlatform(tpns.PlatformIOS),
            tpns.WithMessageType(tpns.Notify),
            tpns.WithTitle("this is title"),
            tpns.WithContent("this is content"),
@@ -113,7 +110,6 @@
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceAccount),
            tpns.WithAccountList([]string{"acc1"}),
-           tpns.WithPlatform(tpns.PlatformIOS),
            tpns.WithMessageType(tpns.Notify),
            tpns.WithTitle("this is title"),
            tpns.WithContent("this is content"),
@@ -144,7 +140,6 @@
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceAccountList),
            tpns.WithAccountList([]string{"acc1", "acc2"}),
-           tpns.WithPlatform(tpns.PlatformIOS),
            tpns.WithMessageType(tpns.Notify),
            tpns.WithTitle("this is title"),
            tpns.WithContent("this is content"),
@@ -185,7 +180,6 @@
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceTag),
            tpns.WithTagRules([]tpns.TagRule{tagRule}),
-           tpns.WithPlatform(tpns.PlatformIOS),
            tpns.WithMessageType(tpns.Notify),
            tpns.WithTitle("this is title"),
            tpns.WithContent("this is content"),
@@ -223,7 +217,6 @@
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceAccountPackage),
            tpns.WithUploadId(uploadResp.UploadId),
-           tpns.WithPlatform(tpns.PlatformIOS),
            tpns.WithMessageType(tpns.Notify),
            tpns.WithTitle("this is title"),
            tpns.WithContent("this is content"),
@@ -259,7 +252,6 @@
        req := tpns.NewRequest(
            tpns.WithAudience(tpns.AudienceTokenPackage),
            tpns.WithUploadId(uploadResp.UploadId),
-           tpns.WithPlatform(tpns.PlatformIOS),
            tpns.WithMessageType(tpns.Notify),
            tpns.WithTitle("this is title"),
            tpns.WithContent("this is content"),

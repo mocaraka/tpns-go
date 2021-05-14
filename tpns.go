@@ -26,6 +26,7 @@ const (
 	TagOperationOr  TagOperationType = "OR"
 )
 
+//deprecated
 // platform type
 type PlatformType string
 
@@ -180,6 +181,7 @@ type LoopParameter struct {
 
 type Request struct {
 	Audience    AudienceType `json:"audience_type"`
+    //deprecated
 	Platform    PlatformType `json:"platform"`
 	Message     *TPNsMessage `json:"message"`
 	MessageType MessageType  `json:"message_type"`
@@ -237,11 +239,11 @@ func (r *Request) Validate() error {
 		}
 	}
 
-	if len(r.Platform) == 0 {
-		return fmt.Errorf("missing platform type")
-	} else if r.Platform != PlatformAndroid && r.Platform != PlatformIOS {
-		return fmt.Errorf("invalid platform type: %s", r.Platform)
-	}
+	//if len(r.Platform) == 0 {
+	//	return fmt.Errorf("missing platform type")
+	//} else if r.Platform != PlatformAndroid && r.Platform != PlatformIOS {
+	//	return fmt.Errorf("invalid platform type: %s", r.Platform)
+	//}
 
 	if len(r.MessageType) == 0 {
 		return fmt.Errorf("missing message type")
@@ -249,13 +251,18 @@ func (r *Request) Validate() error {
 		return fmt.Errorf("invalid message type: %s", r.MessageType)
 	}
 
-	if r.Platform == PlatformIOS {
-		if len(r.Environment) == 0 {
-			return fmt.Errorf("missing environment")
-		} else if r.Environment != Product && r.Environment != Develop {
+	//if r.Platform == PlatformIOS {
+	//	if len(r.Environment) == 0 {
+	//		return fmt.Errorf("missing environment")
+	//	} else if r.Environment != Product && r.Environment != Develop {
+	//		return fmt.Errorf("invalid environment: %v", r.Environment)
+	//	}
+	//}
+    if r.Message != nil && r.Message.IOS != nil {
+	    if r.Environment != Product && r.Environment != Develop {
 			return fmt.Errorf("invalid environment: %v", r.Environment)
-		}
-	}
+        }
+    }
 	return nil
 }
 
