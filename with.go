@@ -204,6 +204,16 @@ func WithLoopParam(loopParam *LoopParameter) Option {
 	}
 }
 
+func WithIgnoreInvalidToken(ignoreInvalidToken bool) Option {
+	return func(r *Request) {
+		if ignoreInvalidToken {
+			r.IgnoreInvalidToken = 1
+		} else {
+			r.IgnoreInvalidToken = 0
+		}
+	}
+}
+
 func NewRequest(opts ...Option) *Request {
 	var r = Request{
 		ExpireTime: 259200,

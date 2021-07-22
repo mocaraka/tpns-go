@@ -202,6 +202,7 @@ type Request struct {
 	PushSpeed          int    `json:"push_speed"`
 	TPNsOnlinePushType int    `json:"tpns_online_push_type"`
 	ForceCollapse      bool   `json:"force_collapse"`
+	IgnoreInvalidToken int    `json:"ignore_invalid_token"`
 
 	ChannelRules []ChannelRule  `json:"channel_rules,omitempty"`
 	LoopParam    *LoopParameter `json:"loop_param,omitempty"`
