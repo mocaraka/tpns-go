@@ -214,6 +214,12 @@ func WithIgnoreInvalidToken(ignoreInvalidToken bool) Option {
 	}
 }
 
+func WithTraceId(traceId string) Option {
+	return func(r *Request) {
+		r.TraceId = traceId
+	}
+}
+
 func NewRequest(opts ...Option) *Request {
 	var r = Request{
 		ExpireTime: 259200,

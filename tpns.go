@@ -203,6 +203,7 @@ type Request struct {
 	TPNsOnlinePushType int    `json:"tpns_online_push_type"`
 	ForceCollapse      bool   `json:"force_collapse"`
 	IgnoreInvalidToken int    `json:"ignore_invalid_token"`
+	TraceId            string `json:"trace_id"`
 
 	ChannelRules []ChannelRule  `json:"channel_rules,omitempty"`
 	LoopParam    *LoopParameter `json:"loop_param,omitempty"`

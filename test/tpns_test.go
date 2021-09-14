@@ -1,8 +1,9 @@
 package main
 
 import (
-    tpns "git.code.tencent.com/tpns/tpns-server-sdk/gosdk"
     "testing"
+
+    tpns "git.code.tencent.com/tpns/tpns-server-sdk/gosdk"
 )
 
 func TestValidateIOS(t *testing.T) {
