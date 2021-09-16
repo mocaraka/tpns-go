@@ -85,6 +85,7 @@ type AndroidMessage struct {
 	BuilderId       int            `json:"builder_id"`
 	BadgeType       int            `json:"badge_type"` //default -1
 	Ring            int            `json:"ring"`       //default 1
+	RingRaw         string         `json:"ring_raw"`
 	Vibrate         int            `json:"vibrate"`    //default 1
 	Lights          int            `json:"lights"`     //default 1
 	Clearable       int            `json:"clearable"`  //default 1
