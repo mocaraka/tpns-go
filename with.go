@@ -156,6 +156,13 @@ func WithMultiPkg(multiPkg bool) Option {
 	}
 }
 
+//Deprecated
+func WithGroupId(groupId string) Option {
+	return func(r *Request) {
+		r.GroupId = groupId
+	}
+}
+
 func WithPlanId(planId string) Option {
 	return func(r *Request) {
 		r.PlanId = planId

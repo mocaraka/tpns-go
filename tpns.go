@@ -197,6 +197,7 @@ type Request struct {
 	ExpireTime         int    `json:"expire_time"` //default 259200
 	SendTime           string `json:"send_time,omitempty"`
 	MultiPkg           bool   `json:"multi_pkg"`
+	GroupId            string `json:"group_id,omitempty"`    //Deprecated
 	PlanId             string `json:"plan_id,omitempty"`
 	AccountPushType    int    `json:"account_push_type"`
 	CollapseId         int    `json:"collapse_id"`
