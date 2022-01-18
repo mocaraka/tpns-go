@@ -200,6 +200,7 @@ type Request struct {
 	GroupId            string `json:"group_id,omitempty"`    //Deprecated
 	PlanId             string `json:"plan_id,omitempty"`
 	AccountPushType    int    `json:"account_push_type"`
+	AccountType        int    `json:"account_type"`
 	CollapseId         int    `json:"collapse_id"`
 	PushSpeed          int    `json:"push_speed"`
 	TPNsOnlinePushType int    `json:"tpns_online_push_type"`

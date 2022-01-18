@@ -175,6 +175,12 @@ func WithAccountPushType(accountPushType int) Option {
 	}
 }
 
+func WithAccountType(accountType int) Option {
+	return func(r *Request) {
+		r.AccountType = accountType
+	}
+}
+
 func WithCollapseId(collapseId int) Option {
 	return func(r *Request) {
 		r.CollapseId = collapseId
