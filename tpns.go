@@ -163,7 +163,7 @@ type TPNsMessage struct {
 	ThreadSumText         string            `json:"thread_sumtext,omitempty"`
 	XGMediaResources      string            `json:"xg_media_resources,omitempty"`
 	XGMediaAudioResources string            `json:"xg_media_audio_resources,omitempty"`
-	ShowType              int               `json:"show_type"`
+	ShowType              int               `json:"show_type,omitempty"`
 	Android               *AndroidMessage   `json:"android,omitempty"`
 	IOS                   *IOSMessage       `json:"ios,omitempty"`
 }
