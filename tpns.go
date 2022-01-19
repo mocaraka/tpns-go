@@ -86,9 +86,9 @@ type AndroidMessage struct {
 	BadgeType       int            `json:"badge_type"` //default -1
 	Ring            int            `json:"ring"`       //default 1
 	RingRaw         string         `json:"ring_raw"`
-	Vibrate         int            `json:"vibrate"`    //default 1
-	Lights          int            `json:"lights"`     //default 1
-	Clearable       int            `json:"clearable"`  //default 1
+	Vibrate         int            `json:"vibrate"`   //default 1
+	Lights          int            `json:"lights"`    //default 1
+	Clearable       int            `json:"clearable"` //default 1
 	IconType        int            `json:"icon_type"`
 	IconRes         string         `json:"icon_res,omitempty"`
 	StyleId         int            `json:"style_id"` //default 1
@@ -163,6 +163,7 @@ type TPNsMessage struct {
 	ThreadSumText         string            `json:"thread_sumtext,omitempty"`
 	XGMediaResources      string            `json:"xg_media_resources,omitempty"`
 	XGMediaAudioResources string            `json:"xg_media_audio_resources,omitempty"`
+	ShowType              int               `json:"show_type"`
 	Android               *AndroidMessage   `json:"android,omitempty"`
 	IOS                   *IOSMessage       `json:"ios,omitempty"`
 }
@@ -181,8 +182,8 @@ type LoopParameter struct {
 }
 
 type Request struct {
-	Audience    AudienceType `json:"audience_type"`
-    //deprecated
+	Audience AudienceType `json:"audience_type"`
+	//deprecated
 	Platform    PlatformType `json:"platform"`
 	Message     *TPNsMessage `json:"message"`
 	MessageType MessageType  `json:"message_type"`
@@ -197,7 +198,7 @@ type Request struct {
 	ExpireTime         int    `json:"expire_time"` //default 259200
 	SendTime           string `json:"send_time,omitempty"`
 	MultiPkg           bool   `json:"multi_pkg"`
-	GroupId            string `json:"group_id,omitempty"`    //Deprecated
+	GroupId            string `json:"group_id,omitempty"` //Deprecated
 	PlanId             string `json:"plan_id,omitempty"`
 	AccountPushType    int    `json:"account_push_type"`
 	AccountType        int    `json:"account_type"`
@@ -263,21 +264,21 @@ func (r *Request) Validate() error {
 	//		return fmt.Errorf("invalid environment: %v", r.Environment)
 	//	}
 	//}
-    if r.Message != nil && r.Message.IOS != nil {
-	    if r.Environment != Product && r.Environment != Develop {
+	if r.Message != nil && r.Message.IOS != nil {
+		if r.Environment != Product && r.Environment != Develop {
 			return fmt.Errorf("invalid environment: %v", r.Environment)
-        }
-    }
+		}
+	}
 	return nil
 }
 
 type Response struct {
-	Seq         int64             `json:"seq"`
-	PushId      interface{}       `json:"push_id,omitempty"` //may be return string or array of string
-	RetCode     int               `json:"ret_code"`
-	ErrMsg      string            `json:"err_msg,omitempty"`
-	Environment string            `json:"environment,omitempty"`
-	Result      string            `json:"result,omitempty"`
+	Seq         int64       `json:"seq"`
+	PushId      interface{} `json:"push_id,omitempty"` //may be return string or array of string
+	RetCode     int         `json:"ret_code"`
+	ErrMsg      string      `json:"err_msg,omitempty"`
+	Environment string      `json:"environment,omitempty"`
+	Result      string      `json:"result,omitempty"`
 }
 
 func (r *Response) GetPushId() string {

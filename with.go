@@ -84,6 +84,15 @@ func WithXGMediaAudioResources(xgMediaAudioResources string) Option {
 	}
 }
 
+func WithShowType(showType int) Option {
+	return func(r *Request) {
+		if r.Message == nil {
+			r.Message = &TPNsMessage{}
+		}
+		r.Message.ShowType = showType
+	}
+}
+
 func WithAndroidMessage(android *AndroidMessage) Option {
 	return func(r *Request) {
 		if r.Message == nil {
