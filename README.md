@@ -1,6 +1,6 @@
 # tpns-server-sdk/gosdk
 ## 概述
-[腾讯移动推送](https://cloud.tencent.com/product/tpns) 是腾讯云提供的一款支持**百亿级**消息的移动App推送平台，开发者可以调用c# SDK访问腾讯移动推送服务。
+[腾讯移动推送](https://cloud.tencent.com/product/tpns) 是腾讯云提供的一款支持**百亿级**消息的移动App推送平台，开发者可以调用golang SDK访问腾讯移动推送服务。
 
 ## 使用说明
 1. 接口和参数，可以参看[官网](https://cloud.tencent.com/document/product/548/39060) ，注意，本代码只支持推送接口。
