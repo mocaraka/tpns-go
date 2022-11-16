@@ -1,4 +1,4 @@
-package gosdk
+package tpns
 
 import (
 	"fmt"

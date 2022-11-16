@@ -1,3 +1,3 @@
-module git.code.tencent.com/tpns/tpns-server-sdk/gosdk
+module github.com/mocaraka/tpns-go
 
-go 1.14
+go 1.19

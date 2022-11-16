@@ -3,7 +3,7 @@ package main
 import (
     "testing"
 
-    tpns "git.code.tencent.com/tpns/tpns-server-sdk/gosdk"
+    "github.com/mocaraka/tpns-go"
 )
 
 func TestValidateIOS(t *testing.T) {
